@@ -1,0 +1,32 @@
+apply plugin: 'java'
+sourceCompatibility = 11
+targetCompatibility = 11
+
+group 'UiJavaCucumberAutotests'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+wrapper.gradleVersion = '5.5.1'
+def cucumberVersion = "7.2.3"
+def junitVersion = "5.8.2"
+def selenideVersion = "6.3.3"
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
+    testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testRuntimeOnly "org.junit.vintage:junit-vintage-engine:${junitVersion}"
+    compile "com.codeborne:selenide:${selenideVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}

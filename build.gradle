@@ -6,6 +6,7 @@ group 'UiJavaCucumberAutotests'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
 
 wrapper.gradleVersion = '5.5.1'
 def cucumberVersion = "7.2.3"
@@ -29,4 +30,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }

@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import com.sun.tools.javac.util.List;
 import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 

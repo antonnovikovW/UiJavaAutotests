@@ -1,6 +1,5 @@
 package steps;
 
-import config.UserConfig;
 import io.cucumber.java.en.Then;
 import pages.SignUpPage;
 
@@ -30,7 +29,7 @@ public class SignUpPageAction {
     }
 
     @Then("Input users data")
-    public void inputUsersData(){
+    public void inputUsersData() {
         signUpPage.inputUsersData(SECONDNAME, NAME, FATHERNAME);
     }
 }
